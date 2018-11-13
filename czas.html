@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<author="Aleksander Dudziñski"/>
+</head>
+<body>
+<h2>   
+Dzisiaj jest:
+<div id="d"> Tu bêdzie dzieñ tygodnia </div> </br>
+<div id="d1"> Tu bêdzie dzieñ miesi¹ca </div>
+<div id="d2"> Tu bêdzie czas </div>              
+<script type="text/javascript">
+var dzisiaj = new Date();
+var dz = dzisiaj.getDay();
+var miesiac = new Date();
+var dz1 = miesiac.getDate();
+var miesiac1 = new Date();
+var dz2 = miesiac1.getMonth()
+var rok = new Date();
+var dz3 = rok.getFullYear();
+var godzina = new Date();
+var dz4 = godzina.getHours();
+var minuty = new Date();
+var sekundy = new Date();
+var msekundy = new Date();
+var dz5 = minuty.getMinutes();
+var dz6 = sekundy.getSeconds();
+var dz7 = msekundy.getMilliseconds();
+var t;
+var m;
+switch(dz2) 
+	{
+	case 0: m="Styczeñ"; break;
+	case 1: m="Luty"; break;
+	case 2: m="Marzec"; break;
+	case 3: m="Kwiecieñ"; break;
+	case 4: m="Maj"; break;
+	case 5: m="Czerwiec"; break;
+	case 6: m="Lipiec"; break;
+	case 7: m="Sierpieñ"; break;
+	case 8: m="Wrzesieñ"; break;
+	case 9: m="Pa¿dziernik"; break;
+	case 10: m="Listopad"; break;
+	case 11: m="Grudzieñ"; break;
+	default: "Nie ma takiego miesi¹ca"; 
+	}
+switch(dz) 
+	{
+	case 0:t="Niedziela"; break;
+	case 1:t="Poniedzia³ek"; break;
+	case 2:t="wtorek"; break;	
+	case 3:t="Œroda"; break;
+	case 4:t="Czwartek"; break;
+	case 5:t="Pi¹tek"; break;
+	case 6:t="Sobota"; break;
+	default: t="Taki dzieñ nie istnieje";
+	}
+	document.getElementById("d").innerHTML=" "+t;	
+	document.getElementById("d1").innerHTML=" "+dz1+" "+m+" "+dz3;
+	document.getElementById("d2").innerHTML=" "+dz4+":"+dz5+":"+dz6;
+</script>
+
+
+</h2>
+</body>
+</html>
